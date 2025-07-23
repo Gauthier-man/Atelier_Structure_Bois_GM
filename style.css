@@ -215,8 +215,13 @@ body {
 
 
 .accompagnement {
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
-              url('img/background-bois.png') center/cover no-repeat;
+ background: linear-gradient(
+  to right,
+  rgba(228, 204, 150, 0.95) 90%,
+  rgba(228, 204, 150, 0.325) 95%,
+  rgba(228, 204, 150, 0.65) 100%
+),
+              url('img/background-bois.jpg') center/cover no-repeat;
   padding: 80px 20px;
 }
 
@@ -307,10 +312,12 @@ body {
 
 .fabrication-text h3 {
   color: #e27628;
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 20px;
+  font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 300;
 }
 
 .fabrication-text p {
@@ -318,6 +325,7 @@ body {
   line-height: 1.6;
   font-size: 15px;
   margin-bottom: 15px;
+  font-family: 'Mulish', Helvetica, Arial, Lucida, sans-serif;
 }
 
 .fabrication-image {
