@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tableau de bord client</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background: #f5f5f5;
+      }
+      h1 {
+        margin-bottom: 30px;
+      }
+      .dashboard {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      .card {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+        flex: 1 1 300px;
+        min-width: 280px;
+      }
+      .card h2 {
+        margin-top: 0;
+        font-size: 1.2em;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+      }
+      .info-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+      }
+      .info-row span:first-child {
+        font-weight: 600;
+        color: #333;
+      }
+      .button {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 8px 14px;
+        background: #007bff;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+      }
+      .button:hover {
+        background: #0056b3;
+      }
+      .messages {
+        max-height: 120px;
+        overflow-y: auto;
+        background: #f9f9f9;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 0.9em;
+        color: #555;
+      }
+      .message {
+        margin-bottom: 10px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 6px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        font-size: 0.9em;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f0f0f0;
+      }
+      .logout {
+        margin-top: 30px;
+        font-weight: 600;
+        color: #b00;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bonjour Jean Dupont, bienvenue dans votre espace client</h1>
+    <div class="dashboard">
+      <div class="card">
+        <h2>Infos fournies par vous</h2>
+        <div class="info-row"><span>Type de projet :</span> Ossature bois</div>
+        <div class="info-row"><span>Localisation :</span> Bordeaux</div>
+        <div class="info-row"><span>Surface approximative :</span> 120 m²</div>
+        <div class="info-row"><span>Délai souhaité :</span> 6 mois</div>
+        <div class="info-row">
+          <span>Description :</span> Extension d’une maison existante avec charpente traditionnelle.
+        </div>
+        <a href="#" class="button">Modifier les infos</a>
+      </div>
+      <div class="card">
+        <h2>Informations ajoutées par notre équipe</h2>
+        <div class="info-row"><span>Montant estimé du devis :</span> 45 000 € TTC</div>
+        <div class="info-row"><span>Délai validé :</span> 6 mois</div>
+        <div class="info-row"><span>Statut du projet :</span> Devis envoyé</div>
+        <div class="info-row"><span>Dernier update :</span> 15 juillet 2025</div>
+        <div class="info-row"><span>Prochaine étape :</span> Validation du devis</div>
+        <a href="#" class="button">Télécharger le devis (PDF)</a>
+      </div>
+      <div class="card">
+        <h2>Messages récents</h2>
+        <div class="messages">
+          <div class="message"><strong>10/07/2025 :</strong> Votre devis est prêt, merci de le valider.</div>
+          <div class="message"><strong>05/07/2025 :</strong> Merci pour votre demande, nous étudions votre projet.</div>
+        </div>
+        <a href="#" class="button">Envoyer un message</a>
+      </div>
+    </div>
+    <div class="card" style="margin-top: 30px">
+      <h2>Historique des projets</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>N° Projet</th>
+            <th>Type</th>
+            <th>Localisation</th>
+            <th>Statut</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1234</td>
+            <td>Extension</td>
+            <td>Bordeaux</td>
+            <td>En cours</td>
+          </tr>
+          <tr>
+            <td>1221</td>
+            <td>Charpente</td>
+            <td>Toulouse</td>
+            <td>Terminé</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="logout">Déconnexion</div>
+  </body>
+</html>

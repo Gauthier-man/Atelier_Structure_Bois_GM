@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin - Tableau de bord</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f4f7;
+        margin: 0;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      th,
+      td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+      }
+      th {
+        background-color: #f7f9fc;
+      }
+      .status {
+        font-weight: bold;
+        padding: 6px 10px;
+        border-radius: 5px;
+        color: white;
+      }
+      .en-attente {
+        background-color: #ff9800;
+      }
+      .traite {
+        background-color: #4caf50;
+      }
+      .en-etude {
+        background-color: #2196f3;
+      }
+      .action-btn {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Demandes de devis reçues</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Client</th>
+          <th>Projet</th>
+          <th>Surface</th>
+          <th>Lieu</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jean Dupont</td>
+          <td>Ossature bois</td>
+          <td>120 m²</td>
+          <td>Bordeaux</td>
+          <td><span class="status en-etude">En cours d'étude</span></td>
+          <td><button class="action-btn">Voir / Traiter</button></td>
+        </tr>
+        <tr>
+          <td>Sarah Lemoine</td>
+          <td>Extension</td>
+          <td>80 m²</td>
+          <td>Nantes</td>
+          <td><span class="status traite">Devis envoyé</span></td>
+          <td><button class="action-btn">Modifier</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

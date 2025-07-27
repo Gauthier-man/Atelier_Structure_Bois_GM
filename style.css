@@ -12,7 +12,8 @@ body {
 }
 
 .header-bg {
-     background: linear-gradient(45deg, #ecc68c, #f0deb0);
+  position: relative; /* important pour positionnement des pseudo-éléments */
+  background: linear-gradient(45deg, #ecc68c, #f0deb0);
   padding: 40px 0;
   display: flex;
   justify-content: center;
@@ -21,9 +22,38 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
-  /* background: transparent; */
   transition: background 0.5s ease;
+  overflow: hidden; /* éviter débordement */
 }
+
+.header-bg::before,
+.header-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-image: url("img/header-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  pointer-events: none;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.header-bg::before {
+  left: 0;
+  background-position: center;
+  transform: scaleX(-1);
+  /* transform-origin: center; */ /* optionnel */
+}
+
+.header-bg::after {
+  right: 0;
+  /* image normale à droite */
+}
+
 
 .header {
   background: white;
@@ -127,8 +157,9 @@ body {
 .presentation {
   padding: 60px 20px;
   background-color: #f9f9f9;
-  background-image: url('background-pattern.png'); /* motif discret si tu veux */
+  background-image: url('img/background-pattern.png');
   background-repeat: repeat;
+  background-size: 206px 206px;
 }
 
 .content {
@@ -291,8 +322,9 @@ body {
 .fabrication {
   background-color: #f8f8f8;
   padding: 80px 20px;
-  background-image: url('img/pattern-topo.png'); /* Facultatif si tu veux le motif discret */
+   background-image: url('img/background-pattern.png');
   background-repeat: repeat;
+  background-size: 206px 206px;
 }
 
 .fabrication-container {
@@ -438,6 +470,9 @@ body {
 .devis-section {
   background-color: #fdfdfd;
   padding: 80px 20px;
+   background-image: url('img/background-pattern.png');
+  background-repeat: repeat;
+  background-size: 206px 206px;
 }
 
 .devis-container {
@@ -645,6 +680,9 @@ body {
   /* padding: 40px 20px; */
   text-align: center;
   padding-top: 488px;
+   background-image: url('img/background-pattern.png');
+  background-repeat: repeat;
+  background-size: 206px 206px;
 }
 
 .gallery-thumbnails {
@@ -683,6 +721,9 @@ body {
   background-color: #fff;
   padding: 60px 20px;
   text-align: center;
+   background-image: url('img/background-pattern.png');
+  background-repeat: repeat;
+  background-size: 206px 206px;
 }
 
 .recent-title {
@@ -698,6 +739,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+  
 }
 
 .post-card {

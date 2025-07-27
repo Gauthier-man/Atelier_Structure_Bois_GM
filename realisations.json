@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "url": "/img/realisations/photo1.png",
+    "categorie": "villas"
+  },
+  {
+    "id": 2,
+    "url": "/img/realisations/photo2.png",
+    "categorie": "charpentes"
+  },
+   {
+    "id": 3,
+    "url": "/img/realisations/photo3.png",
+    "categorie": "extension"
+  }
+]

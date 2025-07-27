@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tableau de bord client - Demande reçue</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background: #f5f5f5;
+      }
+      .dashboard {
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        color: #333;
+      }
+      .info-section {
+        margin-bottom: 20px;
+      }
+      .info-section h2 {
+        font-size: 1.2em;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 8px;
+        margin-bottom: 15px;
+      }
+      .info-row {
+        margin-bottom: 8px;
+      }
+      .status {
+        font-weight: bold;
+        color: #007bff;
+      }
+      .note {
+        font-style: italic;
+        color: #666;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashboard">
+      <h1>Bonjour Jean Dupont,</h1>
+
+      <div class="info-section">
+        <h2>Votre demande de devis a bien été reçue</h2>
+        <p>
+          Merci d’avoir soumis votre projet. Notre équipe va étudier votre demande et reviendra vers vous rapidement.
+        </p>
+      </div>
+
+      <div class="info-section">
+        <h2>Détails de votre projet</h2>
+        <div class="info-row"><strong>Type de projet :</strong> Ossature bois</div>
+        <div class="info-row"><strong>Localisation :</strong> Bordeaux</div>
+        <div class="info-row"><strong>Surface approximative :</strong> 120 m²</div>
+        <div class="info-row"><strong>Délai souhaité :</strong> 6 mois</div>
+        <div class="info-row">
+          <strong>Description :</strong> Extension d’une maison existante avec charpente traditionnelle.
+        </div>
+      </div>
+
+      <div class="info-section">
+        <h2>Statut de votre demande</h2>
+        <p class="status">En cours d'étude</p>
+        <p class="note">Vous serez informé dès que votre devis personnalisé sera prêt.</p>
+      </div>
+    </div>
+  </body>
+</html>

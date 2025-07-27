@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Traitement de la demande</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f3f4f6;
+        padding: 30px;
+      }
+      .card {
+        background: #fff;
+        max-width: 700px;
+        margin: auto;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        margin-bottom: 25px;
+      }
+      label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+      }
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+      button {
+        margin-top: 25px;
+        padding: 12px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .readonly {
+        background-color: #f1f1f1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Traitement de la demande – Jean Dupont</h2>
+
+      <!-- Infos du client (non modifiables) -->
+      <label>Type de projet</label>
+      <input type="text" value="Ossature bois" class="readonly" readonly />
+
+      <label>Surface</label>
+      <input type="text" value="120 m²" class="readonly" readonly />
+
+      <label>Description</label>
+      <textarea class="readonly" readonly>Extension d’une maison existante avec structure bois.</textarea>
+
+      <!-- Partie que l'admin va remplir -->
+      <label>Montant estimé (€)</label>
+      <input type="number" placeholder="Ex: 43000" />
+
+      <label>Délai estimé</label>
+      <input type="text" placeholder="Ex: 3 mois, début prévu en février" />
+
+      <label>Commentaire interne</label>
+      <textarea placeholder="Ex: Le projet est réalisable, reste à faire une visite sur site..."></textarea>
+
+      <label>Statut du projet</label>
+      <select>
+        <option>En attente</option>
+        <option selected>Devis envoyé</option>
+        <option>Validé</option>
+        <option>En fabrication</option>
+        <option>Terminé</option>
+      </select>
+
+      <button>Enregistrer et envoyer le devis</button>
+    </div>
+  </body>
+</html>
