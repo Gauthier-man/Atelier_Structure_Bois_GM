@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Modèles - Les Charpentiers</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f8f8f8;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 40px;
+        color: #333;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+      }
+
+      .card {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.2s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .card-content {
+        padding: 16px;
+      }
+
+      .card h2 {
+        margin: 0 0 10px;
+        font-size: 20px;
+        color: #2a2a2a;
+      }
+
+      .details {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 12px;
+        line-height: 1.6;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .buttons a {
+        flex: 1;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 14px;
+        color: white;
+        background-color: #006a4e;
+        transition: background-color 0.3s ease;
+      }
+
+      .buttons a:hover {
+        background-color: #004f39;
+      }
+
+      @media (max-width: 480px) {
+        .buttons {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Nos Modèles Bois</h1>
+
+    <div class="grid">
+      <div class="card">
+        <img src="bungalow_56.jpg" alt="Bungalow 56m²" />
+        <div class="card-content">
+          <h2>Bungalow 56 m²</h2>
+          <div class="details">
+            <strong>Type :</strong> Studio + Varangue<br />
+            <strong>Surface :</strong> 56 m²<br />
+            <strong>Prix HT :</strong> 78 350 €<br />
+            <strong>Temps de pose :</strong> 3 semaines
+          </div>
+          <div class="buttons">
+            <a href="pdfs/bungalow_56.pdf" target="_blank">Voir fiche PDF</a>
+            <a href="#contact">Demander un devis</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="mob_paula.jpg" alt="MOB Paula 2" />
+        <div class="card-content">
+          <h2>MOB PAULA 2</h2>
+          <div class="details">
+            <strong>Type :</strong> Maison ossature bois<br />
+            <strong>Surface :</strong> 88 m²<br />
+            <strong>Prix HT :</strong> 95 587 €<br />
+            <strong>Charpente :</strong> Pin CL4
+          </div>
+          <div class="buttons">
+            <a href="pdfs/mob_paula.pdf" target="_blank">Voir fiche PDF</a>
+            <a href="#contact">Demander un devis</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tu peux ajouter d'autres modèles ici -->
+    </div>
+  </body>
+</html>
